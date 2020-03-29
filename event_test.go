@@ -121,8 +121,8 @@ func TestEvent_MarshalJSON(t *testing.T) {
 	time.Local = time.FixedZone("EEST", 3*hour)
 
 	tests := []struct {
-		Expect    []byte
-		Arg Event
+		Expect []byte
+		Arg    Event
 	}{
 		{
 			[]byte("{\"Time\":\"2020-03-29T13:54:19.054742+03:00\",\"Action\":\"run\",\"Package\":\"github.com/libmonsoon-dev/gomut/testdata/arithmetic/v1\",\"Test\":\"TestAdd\"}"),

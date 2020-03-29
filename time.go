@@ -31,4 +31,3 @@ func (e *Duration) UnmarshalJSON(data []byte) error {
 	*e = newDuration(seconds)
 	return nil
 }
-
