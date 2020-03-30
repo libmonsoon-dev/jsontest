@@ -9,7 +9,7 @@ import (
 type duration time.Duration
 
 func newDuration(seconds float64) duration {
-	return duration(time.Duration(seconds * float64(time.Second)))
+	return duration(seconds * float64(time.Second))
 }
 
 func (d duration) Duration() time.Duration {
