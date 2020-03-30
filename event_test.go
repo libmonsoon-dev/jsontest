@@ -110,7 +110,6 @@ func TestEvent_UnmarshalJSON(t *testing.T) {
 				t.Errorf("event != test.Expect:\nActual:\t%v\nExpect:\t%v", event, test.Expect)
 			}
 		})
-
 	}
 }
 
