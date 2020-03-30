@@ -15,8 +15,16 @@ func newDuration(seconds float64) duration {
 	return duration(time.Duration(seconds * float64(time.Second)))
 }
 
+func (d duration) Duration() time.Duration {
+	return time.Duration(d)
+}
+
+func (d duration) Seconds() float64 {
+	return d.Duration().Seconds()
+}
+
 func (d duration) MarshalJSON() ([]byte, error) {
-	seconds := time.Duration(d).Seconds()
+	seconds := d.Seconds()
 	return json.Marshal(seconds)
 }
 
