@@ -8,6 +8,6 @@ type Event struct {
 	Action  Action
 	Package string
 	Test    string   `json:",omitempty"`
-	Elapsed Duration `json:",omitempty"`
+	Elapsed duration `json:",omitempty"`
 	Output  string   `json:",omitempty"`
 }
