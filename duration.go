@@ -8,9 +8,6 @@ import (
 
 type duration time.Duration
 
-var _ json.Marshaler = new(duration)
-var _ json.Unmarshaler = new(duration)
-
 func newDuration(seconds float64) duration {
 	return duration(time.Duration(seconds * float64(time.Second)))
 }
