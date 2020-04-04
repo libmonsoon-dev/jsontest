@@ -2,7 +2,8 @@ package jsontest
 
 import "time"
 
-// https://golang.org/cmd/test2json/#hdr-Output_Format
+// Event is the JSON struct that `go test -json` emit.
+// More info: https://golang.org/cmd/test2json/#hdr-Output_Format
 type Event struct {
 	Time    time.Time `json:",omitempty"`
 	Action  Action    ``

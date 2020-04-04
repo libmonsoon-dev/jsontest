@@ -1,7 +1,9 @@
 package jsontest
 
+// The Action field is one of a fixed set of action descriptions
 type Action string
 
+// Action possible values
 const (
 	Run    Action = "run"    // the test has started running
 	Pause         = "pause"  // the test has been paused
