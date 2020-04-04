@@ -1,3 +1,5 @@
+.PHONY: pre-commit
+
 generate-all:
 	go generate ./...
 
