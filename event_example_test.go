@@ -1,18 +1,17 @@
-package example
+package jsontest
 
 import (
 	"bufio"
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/libmonsoon-dev/jsontest"
 	"io"
 	"os/exec"
 )
 
 func ExampleEvent() {
 	type message struct {
-		event jsontest.Event
+		event Event
 		error error
 	}
 
@@ -38,7 +37,7 @@ func ExampleEvent() {
 			}
 
 			r := bufio.NewReader(stdout)
-			var event jsontest.Event
+			var event Event
 
 			for {
 				line, err := r.ReadBytes('\n')
